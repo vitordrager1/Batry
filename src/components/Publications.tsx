@@ -21,6 +21,7 @@ const Publications = () => {
                     <Typography variant="body1">{item.desc}</Typography>
                     <Typography variant="caption">Usuário ID: {item.idUser}</Typography>
                 </Box>
+                
                 ))}
             </Box>
         </Container>
