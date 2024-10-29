@@ -21,15 +21,15 @@ const LayoutDefault: FC<LayoutDefaultProps> = ({
 
   return (
     <div className="flex flex-1 flex-col place-content-start justify-between gap-8 bg-[#EDEDED] md:h-dvh md:gap-10">
-      <div className="flex flex-col gap-5 md:gap-8">
+      <div className="">
         <Header />
         {/* {hasMenu && showMenu} */}
 
-        <div className="flex flex-col gap-4">
+        <div className="">
           {/* {title && <TitleDefault title={title} />} */}
 
-          <div className="flex min-h-[700px] flex-1 flex-col p-3 md:min-h-[800px]">
-            <div className="flex-1 flex-col items-center justify-start">
+          <div className="">
+            <div className="">
               {children}
             </div>
           </div>

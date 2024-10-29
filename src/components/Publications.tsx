@@ -1,27 +1,24 @@
-import { users, publication } from '../Database/moc'
-import { Box, Typography, Container, Button  } from '@mui/material'
+import { publication } from '../Database/moc'
+import { Box, Typography, Container, Button } from '@mui/material'
+import SinglePubli from './SinglePubli'
 
 const Publications = () => {
     const mocPublication = publication
 
-    console.log(mocPublication)
     return (
-        <Container className="grid place-items-center h-screen">
-            <Box className='flex'>
+        <Container className="place-items-center h-screen">
+            <Box className="flex w-2xl justify-end">
                 <Box><Typography>Últimas Reclamações</Typography></Box>
-                <Box>
+                <Box className="justify-end">
                     <Button variant='contained' color='primary'>Nova Reclamação</Button>
                 </Box>
                 
             </Box>
-            <Box  className="">
+            
+            <Box className=''>
+            
                 {mocPublication.map((item) => (
-                <Box key={item.id}>
-                    <Typography variant="h6">{item.title}</Typography>
-                    <Typography variant="body1">{item.desc}</Typography>
-                    <Typography variant="caption">Usuário ID: {item.idUser}</Typography>
-                </Box>
-                
+                    <SinglePubli key={item.id} {...item}></SinglePubli>
                 ))}
             </Box>
         </Container>
