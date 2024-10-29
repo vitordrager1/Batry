@@ -1,7 +1,8 @@
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+// import AppBar from '../components/AppBar'
 // import IndicatorRedirector from '@/components/Indicator/IndicatorRedirector'
-// import TitleDefault from '@/components/Title/TitleDefault'
+import TitleDefault from '../layouts/TitleDefault'
 import { FC, ReactElement, ReactNode } from 'react'
 
 type LayoutDefaultProps = {
@@ -26,7 +27,7 @@ const LayoutDefault: FC<LayoutDefaultProps> = ({
         {/* {hasMenu && showMenu} */}
 
         <div className="">
-          {/* {title && <TitleDefault title={title} />} */}
+          {title && <TitleDefault title={title} />}
 
           <div className="">
             <div className="">

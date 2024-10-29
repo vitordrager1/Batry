@@ -1,5 +1,7 @@
-import { users } from '../Database/moc'
+import { users } from '../../Database/moc'
 import { Box, Typography, Container, Button } from '@mui/material'
+
+//FAZER UM COMPONENTE NO ESTILO SINGLEPUBLI, PORÉM DEVE SER MODAL PARA EXPANDIR A NOTICIA
 
 type Publication = {
     id: number

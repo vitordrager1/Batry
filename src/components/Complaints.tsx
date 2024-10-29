@@ -1,23 +1,20 @@
-import { publication } from '../Database/moc'
+import { complaint } from '../Database/moc'
 import { Box, Typography, Container, Button } from '@mui/material'
-import SinglePubli from './SinglePubli'
+import SinglePubli from './Complaint'
 
-const Publications = () => {
-    const mocPublication = publication
+const Complaints = () => {
+    const mocComplaints = complaint
 
     return (
         <Container className="place-items-center h-screen">
-            <Box className="flex w-2xl justify-end">
-                <Box><Typography>Últimas Reclamações</Typography></Box>
-                <Box className="justify-end">
+            <Box className="flex mt-10 min-h-20 w-full">
+                <Box className="ml-auto">
                     <Button variant='contained' color='primary'>Nova Reclamação</Button>
                 </Box>
-                
             </Box>
             
             <Box className=''>
-            
-                {mocPublication.map((item) => (
+                {mocComplaints.map((item) => (
                     <SinglePubli key={item.id} {...item}></SinglePubli>
                 ))}
             </Box>
@@ -25,4 +22,4 @@ const Publications = () => {
     )
 }
 
-export default Publications
+export default Complaints

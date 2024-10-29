@@ -1,13 +1,13 @@
 import { Fragment, useEffect, useState } from 'react'
 import LayoutDefault from '../layouts/LayoutDefault'
-import Publications from '../components/Publications'
+import PostNews from '../components/PostNews'
 const Home = () => {
 
 
     return (
-        <LayoutDefault hasMenu title="Últimas Reclamações">
-            <Publications/>
+        <LayoutDefault hasMenu title="Inicio">
             
+            <PostNews/>
         </LayoutDefault>
     )
 }
