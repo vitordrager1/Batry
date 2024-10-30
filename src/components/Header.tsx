@@ -12,8 +12,14 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import Link from 'next/link';
 
-const pages = ['Notícias', 'Compra e Venda', 'Reclamações'];
+const pages = [
+  { title: "Notícias", component: "news"},
+  { title: "Compra e Venda", component: "/"},
+  { title: "Reclamações", component: "complaints"},
+];
+
 const settings = ['Notificações', 'Perfil', 'Sair'];
 
 function ResponsiveAppBar() {
@@ -44,7 +50,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="Home"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -86,8 +92,8 @@ function ResponsiveAppBar() {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                <MenuItem key={page.component} onClick={handleCloseNavMenu}>
+                  <Typography sx={{ textAlign: 'center' }} >{page.title}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -97,7 +103,7 @@ function ResponsiveAppBar() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -109,16 +115,17 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            BATRY
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.component}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                href={page.component}
               >
-                {page}
+                {page.title}
               </Button>
             ))}
           </Box>
