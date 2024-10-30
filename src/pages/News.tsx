@@ -5,7 +5,7 @@ const Home = () => {
 
 
     return (
-        <LayoutDefault hasMenu title="Inicio">
+        <LayoutDefault hasMenu title="Últimas Notícias">
             
             <PostNews/>
         </LayoutDefault>

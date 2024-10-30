@@ -1,10 +1,12 @@
 import './App.css';
-import { Button, Box } from '@mui/material';
+
 import Home from './pages/Home';
+import News from './pages/News'
 
 function App() {
   return (
     <Home/>
+    // <News/>
   );
 }
 

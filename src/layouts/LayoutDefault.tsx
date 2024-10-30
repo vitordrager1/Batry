@@ -21,23 +21,18 @@ const LayoutDefault: FC<LayoutDefaultProps> = ({
   //const showMenu: ReactElement = menu || <IndicatorRedirector />
 
   return (
-    <div className="flex flex-1 flex-col place-content-start justify-between gap-8 bg-[#EDEDED] md:h-dvh md:gap-10">
-      <div className="">
+    <div className="flex flex-col min-h-screen justify-between bg-[#EDEDED]">
+      <div>
         <Header />
         {/* {hasMenu && showMenu} */}
 
-        <div className="">
+        <div>
           {title && <TitleDefault title={title} />}
-
-          <div className="">
-            <div className="">
-              {children}
-            </div>
-          </div>
+          <div>{children}</div>
         </div>
       </div>
 
-      <Footer />
+        <Footer />
     </div>
   )
 }

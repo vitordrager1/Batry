@@ -1,23 +1,23 @@
-import { complaint } from '../Database/moc'
+import { posts } from '../Database/moc'
 import { Box, Typography, Container, Button } from '@mui/material'
-import SinglePubli from './Complaint'
+import Post from './Modal/PostModal'
 
 //Percorre a tabela de noticias, e gera os modais clicaveis.
 
 const PostNews = () => {
-    const mocComplaint = complaint
+    const mocPost = posts
 
     return (
         <Container className="place-items-center h-screen">
             <Box className="flex mt-10 min-h-20 w-full">
                 <Box className="ml-auto">
-                    <Button variant='contained' color='primary'>Nova Reclamação</Button>
+                    <Button variant='contained' color='primary'>Nova Publicação</Button>
                 </Box>
             </Box>
             
             <Box className=''>
-                {mocComplaint.map((item) => (
-                    <SinglePubli key={item.id} {...item}></SinglePubli>
+                {mocPost.map((item) => (
+                    <Post key={item.id} {...item}></Post>
                 ))}
             </Box>
         </Container>

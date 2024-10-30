@@ -1,4 +1,4 @@
-import { users } from '../Database/moc'
+import { getUserName } from '../services/UsersService'
 import { Box, Typography} from '@mui/material'
 
 //Modelo padrão de uma publicação/reclamação
@@ -9,11 +9,6 @@ type Complaint = {
     description: string
     idUser: number
 }
-
-const getUserName = (id: number) => {
-    const user = users.find((item) => item.id === id);
-    return user ? user.name : null; // Retorna o nome se o usuário for encontrado, caso contrário, retorna null
-};
 
 const Complaint = (complaint: Complaint) => {
     const nameUser = getUserName(complaint.id)
