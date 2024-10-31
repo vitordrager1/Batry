@@ -385,7 +385,7 @@ module.exports = require("@mui/utils/useId");
 
 /***/ }),
 
-/***/ "clsx":
+/***/ "clsx?ce27":
 /*!***********************!*\
   !*** external "clsx" ***!
   \***********************/
