@@ -5,12 +5,9 @@
 ### ! !
 
 
-  "scripts": {
-    // "start": "react-scripts start",
-    // "build": "react-scripts build",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+### -------------------------------------Padrões nomenclatura------------------------------------------
+### Componente      : C+'Nome componente' - exemplo CComment (Componente Comentários)
+### Componente Modal: M+'Nome componente' - exemplo MPublishNews (Componente Modal Publicação Notícias)
+### Layout          : L+'Nome componente' - exemplo LPageDefault (Layout default para páginas) ou LTitle (Layout default para títulos)
+### Services        : S+'Nome componente' + 999 - exemplo SComplaint001 (Serviços Complaint 001)
+### pages           : 'nome componente' (minúsculo)

@@ -1,6 +1,6 @@
 import { publishNews } from '../Database/moc'
 import { Box, Typography, Container, Button } from '@mui/material'
-import Post from './Modal/PostModal'
+import MPublishNews from './Modal/MPublishNews'
 
 //Percorre a tabela de noticias, e gera os modais clicaveis.
 
@@ -17,7 +17,7 @@ const PublishNews = () => {
             
             <Box className=''>
                 {mocPublishNews.map((item) => (
-                    <Post key={item.id} {...item}></Post>
+                    <MPublishNews key={item.id} {...item}></MPublishNews>
                 ))}
             </Box>
         </Container>

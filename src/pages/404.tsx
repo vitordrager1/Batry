@@ -1,5 +1,5 @@
 import SearchOffIcon from '@mui/icons-material/SearchOff'
-import LayoutDefault from '../layouts/LayoutDefault'
+import LayoutDefault from '../layouts/LPages'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@mui/material'

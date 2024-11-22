@@ -1,11 +1,11 @@
 //index é a página inicial localhost:3000/
-import { getComplaintQt } from '../services/ComplaintsService';
-import Complain from '../components/Complaint'
-import TitleDefault from '../layouts/TitleDefault';
-import LayoutDefault from '../layouts/LayoutDefault';
+import { getComplaintQt } from '../services/SComplaints001';
+import Complain from '../components/CComplaint'
+import TitleDefault from '../layouts/LTitle';
+import LayoutDefault from '../layouts/LPages';
 import { Box } from '@mui/material';
-import { getPublishNewsQt } from '../services/PublishNewsService';
-import Post from '../components/Modal/PostModal';
+import { getPublishNewsQt } from '../services/SPublishNews001';
+import Post from '../components/Modal/MPublishNews';
 
 function App() {
   const lastComplaints = getComplaintQt(2);

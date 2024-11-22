@@ -4,6 +4,5 @@
   "/_document": "pages/_document.js",
   "/complaints": "pages/complaints.js",
   "/": "pages/index.js",
-  "/publishNews": "pages/publishNews.js",
-  "/404": "pages/404.js"
+  "/publishNews": "pages/publishNews.js"
 }
