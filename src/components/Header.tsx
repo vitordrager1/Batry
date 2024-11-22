@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import Link from 'next/link';
 
 const pages = [
-  { title: "Notícias", component: "news"},
+  { title: "Notícias", component: "publishNews"},
   { title: "Compra e Venda", component: "/"},
   { title: "Reclamações", component: "complaints"},
 ];

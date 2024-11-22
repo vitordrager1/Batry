@@ -5,7 +5,7 @@ import Complaint from '../components/Complaints'
 
 const Complaints = () => {
     return (
-        <LayoutDefault hasMenu title="Últimas Notícias">
+        <LayoutDefault hasMenu title="Últimas Reclamações">
             <Complaint/>
         </LayoutDefault>
     )

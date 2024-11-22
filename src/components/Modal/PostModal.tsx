@@ -25,7 +25,7 @@ const Post = (post: Post) => {
     return (
         <> {/*O símbolo <> </> é conhecido como um Fragment no React. Ele permite agrupar múltiplos elementos JSX sem adicionar um elemento extra ao DOM, como uma div ou Box.    */}
             
-            <Box onClick={handleOpen} className="flex m-2 max-w-7xl min-h-60 max-h-40 bg-stone-100">
+            <Box onClick={handleOpen} className="flex m-2 max-w-7xl max-h-40 bg-stone-100">
                 <Box className = "w-96 overflow-hidden">.png</Box>
                 <Box className="max-w-screen-md w-2/3 overflow-hidden p-2 text-clip">
                     <Box className="flex justify-end"><Typography> {nameUser} </Typography></Box>
@@ -37,13 +37,13 @@ const Post = (post: Post) => {
             {/* Modal que exibe a notícia completa */}
             <Modal open={open} onClose={handleClose} aria-labelledby="modal-title" aria-describedby="modal-description">
                 <Box className="p-4 bg-white max-w-xl mx-auto my-20 rounded-lg shadow-lg">
-                <Typography id="modal-title" variant="h5" className="font-bold">{post.title}</Typography>
-                <Typography id="modal-description" variant="body1" className="mt-4">
-                    {post.description}
+                    <Typography id="modal-title" variant="h5" className="font-bold">{post.title}</Typography>
+                    <Typography id="modal-description" variant="body1" className="mt-4">
+                        {post.description}
+                        </Typography>
+                    <Typography id="modal-description" variant="body2" className="mt-4 text-blue-600 underline cursor-pointer hover:text-blue-800">
+                        Referencias: {post.reference}
                     </Typography>
-                <Typography id="modal-description" variant="body2" className="mt-4 text-blue-600 underline cursor-pointer hover:text-blue-800">
-                    Referencias: {post.reference}
-                </Typography>
                 <Button onClick={handleClose} variant="contained" color="primary" className="mt-4">Fechar</Button>
                 </Box>
             </Modal>

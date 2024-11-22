@@ -1,16 +1,29 @@
 //index é a página inicial localhost:3000/
-
-import Link from 'next/link';
+import { getComplaintQt } from '../services/ComplaintsService';
+import Complain from '../components/Complaint'
+import TitleDefault from '../layouts/TitleDefault';
 import LayoutDefault from '../layouts/LayoutDefault';
 import { Box } from '@mui/material';
-// import News from '../pages/news'
+import { getPublishNewsQt } from '../services/PublishNewsService';
+import Post from '../components/Modal/PostModal';
 
 function App() {
+  const lastComplaints = getComplaintQt(2);
+  const lastPublishNews = getPublishNewsQt(2);
   return (
     <LayoutDefault hasMenu>
-      <div className="flex items-center justify-center min-h-screen bg-blue-500 text-white">
-        <h1 className="text-4xl font-bold">Tailwind CSS funcionando no Next.js!</h1>
-      </div>
+      <TitleDefault title='Últimas Reclamações'/>
+      <Box className='m-auto w-1/2'>
+                {lastComplaints && lastComplaints.map((item) => (
+                    <Complain key={item.id} {...item}></Complain>
+                ))}
+        </Box>
+        <TitleDefault title='Últimas Notícias'/>
+        <Box className='m-auto w-1/2'>
+                {lastPublishNews && lastPublishNews.map((item) => (
+                    <Post key={item.id} {...item}></Post>
+                ))}
+        </Box>
     </LayoutDefault>
   );
 }

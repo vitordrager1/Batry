@@ -6,16 +6,17 @@ export const users = [
     { id: 5, name: "Eduardo" }
 ];
 
-export const complaint = [
+export const complaints = [
     { id: 1, title: "Introdução ao JavaScript", description: "Uma introdução básica à linguagem JavaScript.", idUser: 1 },
     { id: 2, title: "React para Iniciantes", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..", idUser: 2 },
     { id: 3, title: "Guia de Estilização CSS", description: "Dicas para estilizar páginas web usando CSS.", idUser: 3 },
     { id: 4, title: "Desenvolvimento de APIs com Node.js", description: "Como criar APIs RESTful com Node.js.", idUser: 2 },
-    { id: 5, title: "Estruturas de Dados em JavaScript", description: "Explorando estruturas de dados comuns em JavaScript.", idUser: 4 }
+    { id: 5, title: "Rec - Estruturas de Dados em JavaScript", description: "Explorando estruturas de dados comuns em JavaScript.", idUser: 4 },
+    { id: 6, title: "Estruturas de Dados em TAILWIND", description: "Explorando estruturas de dados comuns em TAILWIND.", idUser: 4 }
 ];
 
 
-export const posts = [
+export const publishNews = [
   {
     id: 1,
     title: "Primeiro Post",
@@ -57,3 +58,9 @@ export const posts = [
     idUser: 104,
   },
 ];
+
+
+export const coments = [
+  { id: 1, idComplaint: 1, description: "Primeiro comentário", idUser: 5},
+  { id: 2, idComplaint: 1, description: "Segundo comentário", idUser: 2}
+]

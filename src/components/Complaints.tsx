@@ -1,9 +1,9 @@
-import { complaint } from '../Database/moc'
+import { complaints } from '../Database/moc'
 import { Box, Typography, Container, Button } from '@mui/material'
 import Complain from './Complaint'
 
 const Complaints = () => {
-    const mocComplaints = complaint
+    const mocComplaints = complaints
 
     return (
         <Container className="place-items-center">

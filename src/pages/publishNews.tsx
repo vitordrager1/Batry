@@ -1,12 +1,12 @@
 import { Fragment, useEffect, useState } from 'react'
 import LayoutDefault from '../layouts/LayoutDefault'
-import PostNews from '../components/PostNews'
+import PublishNews from '../components/CPublishNews'
 const News = () => {
 
 
     return (
         <LayoutDefault hasMenu title="Últimas Notícias">
-            <PostNews/>
+            <PublishNews/>
         </LayoutDefault>
     )
 }
